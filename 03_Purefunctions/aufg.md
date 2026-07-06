@@ -4,14 +4,17 @@
 |---------|----------------------|--------------------------------------------------|-------------------------------------|------------------|
 | 1.1     | Ja                   | Nein                                             | Nein                                | impure           | 
 | 1.2     | Ja                   | Ja                                               | Ja                                  | pure             | 
-| 1.3     | Ja                   | Ja                                               | Ja                                  | pure             | 
+| 1.3     | Ja                   | Ja                                               | Ja                                  | impure           | 
 | 1.4     | Ja                   | Nein                                             | Ja                                  | impure           | 
-| 1.5     | Ja                   | Ja                                               | Ja                                  | pure             | 
+| 1.5     | Ja                   | Ja                                               | Ja                                  | impure           | 
 | 1.6     | Ja                   | Ja                                               | Nein                                | impure           |
 
-### Aufgabe 3
+# Aufgabe 2
 
-#### 3.1
+
+# Aufgabe 3
+
+## 3.1
 ````js
 function sum_03(numbers) {
     if (numbers.length === 0) return 0;
@@ -26,7 +29,7 @@ console.log(sum_03([0,0,0]));
 ````
 Diese Funktion berechnet die Summe einer Liste rekursiv, indem sie das erste Element(``head``) zum Ergebnis der verbleibenden Restliste(``tail``) addiert. Sobald eine leere Liste erreicht wird, gibt die Abbruchbedingung den Wert 0 zurück und beendet die Kette.
 
-#### 3.2
+## 3.2
 ````js
 function average_03(numbers, length = numbers.length) {
     if (numbers.length === 0) return 0;
@@ -38,7 +41,7 @@ console.log("Average:", average_03(MyNumbers));
 ````
 Zur Ermittlung des Durchschnitts nutzt die Funktion die rekursive Summenlogik und teilt das Gesamtergebnis durch die ursprüngliche Anzahl der Elemente. Ein Sicherheits-Check für leere Listen verhindert dabei mathematische Fehler wie die Division durch Null.
 
-#### 3.3
+## 3.3
 ````js
 function sortStrings_03(list) {
     if (list.length <= 1) return list;
@@ -55,7 +58,7 @@ console.log(sortStrings_03(myStrings))
 ````
 Dieser Algorithmus zerlegt die Liste ohne Veränderung der Originaldaten rekursiv in Teilbereiche, die kleiner oder grösser als eine gewähltes Vergleichselmenet(Pivot) sind. durch die Umwandlung in Kleinschreibung wird sichergestellt, dass die Sortierung unabhängig von der Gross und Kleinschreibung korrekt erfolgt.
 
-#### 3.4
+## 3.4
 ````js
 const sortObjects_03 = (list) => {
     if (list.length <= 1) return list;
@@ -82,7 +85,7 @@ console.log(sortObjects_03(myObjects));
 ````
 Die Funktion sortiert komplexe Datenstrukturen basierend auf einer festen Hierarchie aus Datum Priorität und Titel. Da bei jedem rekursiven Schritt neue Listen via Filter-Funktionen erstellt werden, bleibt der gesamte Sortierprozess eine Pure Function ohne Seiteneffekte.
 
-#### 3.5
+## 3.5
 ````js
 function getLeaves_03(node) {
     if (!node.children || node.children.length === 0) {
