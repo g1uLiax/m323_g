@@ -1,0 +1,16 @@
+{
+  "name": "webcrawler-functional",
+  "version": "1.0.0",
+  "description": "Purely functional depth-limited webcrawler in TypeScript",
+  "main": "dist/src/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/main.js",
+    "test": "tsc && node --test dist/tests/parser.test.js dist/tests/crawler.test.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.24"
+  }
+}
